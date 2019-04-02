@@ -1,0 +1,89 @@
+.footer {
+    background: #40526b;
+    width: 100%;
+    float: left;
+}
+
+.footer .footer-logo {
+    background: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.footer .footer-logo p {
+    padding: 20px;
+    color: #40526b;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.footer .footer-logo img {
+    max-height: 140px;
+    max-width: 200px;
+}
+
+.footer .footer-links {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer .disc {
+    padding-bottom: 50px;
+}
+
+.footer ul {
+    flex-basis: 13em;
+    flex-shrink: 0;
+    margin-bottom: 3em;
+    padding: 0;
+}
+
+.footer li {
+    line-height: 1.5em;
+    list-style: none;
+    text-align: center;
+}
+
+.footer li a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+.footer li a:focus, .footer li a:hover {
+    color: white;
+}
+
+.footer li h3 {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+}
+
+.footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto 1.5em;
+    width: 12em;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+}
+
+@media screen and (max-width: 1250px) {
+    .footer .footer-logo img {
+        width: auto;
+        height: 50px;
+    }
+    .footer {
+        background: #40526b;
+        width: 100%;
+        float: left;
+    }
+}
