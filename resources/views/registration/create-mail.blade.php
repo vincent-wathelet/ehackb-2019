@@ -85,19 +85,6 @@
 
                         </div>
 
-                        <div class="col">
-
-                            <!-- STEAM ID -->
-
-                            <div class="form-group {{ $errors->has('steamid') ? ' has-error' : '' }}">
-                                <label for="steamid" class="control-label">SteamID</label>
-                                <input type="text" name="steamid" class="form-control" id="steamid" placeholder="SteamID" value="{{ old('steamid') }}"/>
-                                @if ($errors->has('steamid'))
-                                    <span class="help-block"><strong>{{ $errors->first('steamid') }}</strong></span>
-                                @endif
-                            </div>
-
-                        </div>
                     </div>
 
                     <div class="form-row">

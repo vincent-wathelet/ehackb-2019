@@ -1,6 +1,6 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
-@section('title')
+@section('head')
 
     <title>Registratie</title>
 
@@ -8,10 +8,11 @@
 
 @section('content')
 
-    <div class="card">
+    <div class="card container">
         <div class="card-body">
-            <img class="card-img-top" src="img/ehackb.png" alt="Card image cap">
-            <br><br>
+            <div class="row ">
+            <img class="card-image-top mx-auto rounded-circle my-3" src="img/ehackbv6logo.png" alt="ehackb logo v6">
+            </div>
             <p class="text-center">
                 Bij problemen tijdens het registreren kan je steeds contact opnemen via
                 <a href="https://www.facebook.com/EhackB/">Facebook</a> <strong>(snel)</strong>
@@ -46,7 +47,7 @@
 
                             <!-- EMAIL -->
 
-                            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="inputEmail" class="control-label">E-mail*</label>
                                 <input type="email" name="email" class="form-control" id="inputEmail"
                                        placeholder="E-mail" required autofocus value="{{old('email')}}"/>
@@ -60,7 +61,7 @@
 
                             <!-- REMINDER EMAIL -->
 
-                            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="inputReminderEmail" class="control-label">Reminder E-mail</label>
                                 <input type="email" value="{{ old('reminderemail') }}" name="reminderemail"
                                        class="form-control" id="inputReminderEmail" placeholder="Reminder E-mail">
@@ -102,20 +103,6 @@
 
                         </div>
 
-                        <div class="col">
-
-                            <!-- STEAM ID -->
-
-                            <div class="form-group {{ $errors->has('steamid') ? ' has-error' : '' }}">
-                                <label for="steamid" class="control-label">SteamID</label>
-                                <input type="text" name="steamid" class="form-control" id="steamid"
-                                       placeholder="SteamID" value="{{ old('steamid') }}"/>
-                                @if ($errors->has('steamid'))
-                                    <span class="help-block"><strong>{{ $errors->first('steamid') }}</strong></span>
-                                @endif
-                            </div>
-
-                        </div>
                     </div>
 
                     <div class="form-row">

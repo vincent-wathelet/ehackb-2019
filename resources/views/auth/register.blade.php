@@ -1,4 +1,4 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
 @section('head')
   <title>Registreren</title>

@@ -1,0 +1,43 @@
+
+$bg-set-primary: #1d1d1c;
+$bg-set-secondery: #f39202;
+$bg-set-alternative: #e51c28;
+$text-primarycolor: #afb9a7;
+
+.bg-set-primary
+{
+    background: $bg-set-primary;
+    color: $text-primarycolor;
+}
+.bg-set-secondery
+{
+    background-color: $bg-set-secondery;
+}
+
+.bg-set-alternative
+{
+    background-color: $bg-set-alternative;
+}
+.bg-set-textcolor
+{
+    background-color: $text-primarycolor;
+}
+.text-primarycolor
+{
+    color: $text-primarycolor;
+}
+.bg-set-textcolor
+{
+    background-color: $text-primarycolor;
+}
+.bg-image-ehackb
+{
+    background-image: url('/img/achtergrond.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-origin: content-box;
+}
+.card-with
+{
+    max-width: 420px;
+}
