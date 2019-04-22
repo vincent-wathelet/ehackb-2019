@@ -31,7 +31,7 @@
 </head>
 
 <body id="top">
-<header >
+<header>
     <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
         <a class="navbar-brand" href="#top">
             <img src="img/EhackBLogo.png" width="30" height="30" alt="logo">
@@ -54,8 +54,12 @@
                     <a class="nav-link smooth-scroll" href="#programma">Programma</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#gaming">Gaming</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link smooth-scroll" href="#corners">Corners</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
                 </li>
@@ -78,6 +82,7 @@
                         <ul>
                             <li><a href="#registreren">Registreren</a></li>
                             <li><a href="#programma">Programma</a></li>
+                            <li><a href="#gaming">Gaming</a></li>
                             <li><a href="#corners">Corners</a></li>
                             <li><a href="#locatie">Locatie</a></li>
                         </ul>
@@ -204,7 +209,8 @@
             <div class="card-deck">
 
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('img/programma/Code-Attacking-Injecting-XL.jpg')}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('img/programma/Code-Attacking-Injecting-XL.jpg')}}"
+                         alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Inti De Ceukelaire (INTIGRITI) </h4>
                         <h6 class="card-subtitle mb-2 text-muted">Creative Hacking: finding unique bugs </h6>
@@ -218,7 +224,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top d-block" src="{{asset('img/programma/social-engineering.jpg')}}" alt="Card image cap">
+                    <img class="card-img-top d-block" src="{{asset('img/programma/social-engineering.jpg')}}"
+                         alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Erik Vanderhasselt</h4>
                         <h6 class="card-subtitle mb-2 text-muted">OSINT workshop</h6>
@@ -286,6 +293,9 @@
                 </div>
 
             </div>
+            <div id="gaming">
+                <br><br><br>
+            </div>
             <div class="program_header">
                 <img src="img/programma/gaming.svg" alt="game controller" class="icon"/>
                 <h2 class="pixText">GAMING COMPETITION</h2>
@@ -320,7 +330,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('img/programma/rocketleague-photo.jpg')}}" alt="Rocket League">
+                    <img class="card-img-top" src="{{asset('img/programma/rocketleague-photo.jpg')}}"
+                         alt="Rocket League">
                     <div class="card-body">
                         <h4 class="card-title">Rocket League</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
@@ -440,17 +451,20 @@
                         <br>1070 Anderlecht</p>
                     <ul>
                         <li>
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=bicycling" target="_blank" id="fietsen" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=bicycling"
+                               target="_blank" id="fietsen" class="showOverlay">
                                 <img src="img/locatie/fiets.svg" alt=""/>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=transit" target="_blank" id="openbaar" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=transit"
+                               target="_blank" id="openbaar" class="showOverlay">
                                 <img src="img/locatie/trein.svg" alt=""/>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=driving" target="_blank" id="auto" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=driving"
+                               target="_blank" id="auto" class="showOverlay">
                                 <img src="img/locatie/auto.svg" alt=""/>
                             </a>
                         </li>
