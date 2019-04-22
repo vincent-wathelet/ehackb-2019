@@ -18,7 +18,7 @@ Route::group(['middleware' => 'web'], function () {
 
     // Show index
     Route::get('/', function (){
-        return view('ehackb.2017');
+        return view('ehackb.2019');
     });
 
     // Show user his info

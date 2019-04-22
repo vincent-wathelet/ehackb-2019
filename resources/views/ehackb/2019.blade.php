@@ -1,9 +1,7 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="nl">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>EhackBv6</title>
     <meta name="description" content="EhackBv6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,27 +10,31 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="img/favicons/manifest.json">
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#0d0d35">
     <meta name="apple-mobile-web-app-title" content="EHackB6">
     <meta name="application-name" content="EHackB6">
-    <meta name="theme-color" content="#0d0d35">
+    <meta name="theme-color" content="#1D1D1B">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style2017.css">
 
-
+    <link rel="stylesheet" href="css/style2019.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body id="top">
-
-<header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #0D0D35;">
+<header >
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
         <a class="navbar-brand" href="#top">
-            <img src="img/logo5.svg" width="30" height="30" alt="">
+            <img src="img/EhackBLogo.png" width="30" height="30" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent"
@@ -40,7 +42,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse pixText" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link smooth-scroll" href="#top">Start</a>
@@ -63,29 +65,37 @@
 </header>
 
 <main>
-    <div id="overlay" class="overlay">
-        <span class="close">x</span>
-        <div>
-            <div class="title"></div>
-            <div class="text"></div>
-        </div>
-    </div>
-
-    <section id="home">
-        <h1 style="margin: 0;margin-left: -99999px;height: 0;">EHackB</h1>
-        <div class="home_center">
-            <div>
-                <img src="img/home/LogoEHackB.png" alt="Logo EHackB5"/>
-                <p id="countdown"></p>
+    <section class="welcome">
+        <img id="bg" src="img/background.png" alt="Background">
+        <div class="tv-container">
+            <div class="tv">
+                <img src="img/tv.png">
+                <div class="logo-nav-container">
+                    <div class="logo-container">
+                        <img src="img/EhackBLogo.png" alt="logo">
+                    </div>
+                    <div class="selectors pixText">
+                        <ul>
+                            <li><a href="#registreren">Registreren</a></li>
+                            <li><a href="#programma">Programma</a></li>
+                            <li><a href="#corners">Corners</a></li>
+                            <li><a href="#locatie">Locatie</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="pc-container">
+            <img src="img/pc.png" alt="computer-img">
         </div>
     </section>
 
     <section id="registreren">
+        <img id="fade" src="img/registreren/fade.png" alt="fade">
         <div class="register_center">
             <div>
                 <img src="img/registreren/logoSimple.svg" alt="Logo"/>
-                <p>EhackBv5 is afgelopen,</p>
+                <p>EhackBv6 is afgelopen,</p>
                 <p>hou de website in de gaten voor de volgende editie!</p>
             </div>
         </div>
@@ -94,196 +104,194 @@
 
     <section id="programma">
         <div class="program_center">
-            <img src="img/programma/sprekers.svg" alt="" class="icon"/>
-            <h2>SPREKERS</h2>
+            <div class="program_header">
+                <img src="img/programma/sprekers.svg" alt="" class="icon"/>
+                <h2 class="pixText">SPREKERS</h2>
+            </div>
             <hr>
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/internet-of-things-IoT.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('img/programma/datasecurity.png')}}" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Bart Keybergh (Userfull)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Internet Of Things</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_Userfull.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
+                        <h4 class="card-title">Kris Bijnens (VARONIS)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Security vanuit het data standpunt </h6>
+                        <p class="card-text">Inclusief demo van een hack en detection met Varonis</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / NL / Audi 4</small>
+                        <small class="text-muted">15:00 - 16:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/cloudsecurity.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('img/programma/Linux.jpg')}}" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Koert Martens (Kappa Data, Barracuda)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_KappaData.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
+                        <h4 class="card-title">Kenny Van de Maele (INUITS)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Waarom Linux zo’n belangrijk platform is
+                            voor development en system engineering.</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / NL / Audi 5</small>
+                        <small class="text-muted">15:00 - 16:00 / Audi 4</small>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="img/programma/ira.jpg" alt="Irasara Senarathne">
-                    <div class="card-body">
-                        <h4 class="card-title">Irasara Senarathne (Guardsquare)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Mobile application protection &amp; reverse
-                            engineering</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_Guardsquare.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / EN / Audi 1</small>
-                    </div>
-                </div>
+
             </div>
 
             <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="img/programma/cloudsecurity.jpg" alt="Irasara Senarathne">
+                    <div class="card-body">
+                        <h4 class="card-title">Rutger Truyers (PALO ALTO)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Cloud security in IaaS, SaaS, PaaS &
+                            Next Generation Firewalls today</h6>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">16:00 - 17:00 / Audi 1</small>
+                    </div>
+                </div>
                 <div class="card">
                     <img class="card-img-top" src="img/programma/NOC.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Koen Vanhees (Cegeka)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Een Security Operation Center – voorbeelden ‘from the
-                            field’</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="cegeka" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Jordy Blommaert (DELAWARE)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Secure your digital workplace environment</h6>
+                        <!--                            <a href="" id="cegeka" class="card-link showOverlay">Meer info...</a>-->
+                        <p class="card-text">More and more customers are choosing for a cloud solution where
+                            all services are managed in the Microsoft Cloud. The main question of this
+                            functionality is: “Is a Cloud environment secure?”. This workshop demonstrates
+                            how to secure your digital workplace environment and shows you to benefits of a
+                            secure digital workplace</p>
+
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / NL / Audi 4</small>
+                        <small class="text-muted">16:00 - 17:00 / Audi 4</small>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="img/programma/toreon_sebastien.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Whiteboard Hacking aka Hands-on Threat Modeling</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="toreon1" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_Toreon_1.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">17:15 - 18:15 / NL / Audi 5</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="img/programma/zerodayexploit.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Rutger Truyers (Checkpoint)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">ZERO-Day prevention</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="checkpoint" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_Checkpoint.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">17:15 - 18:15 / NL / Audi 1</small>
-                    </div>
-                </div>
+
             </div>
 
             <div class="card-deck">
+
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/gamedevelopment.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/programma/internet-of-things-IoT.jpeg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Dirk Van Welden</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Indie Game Development</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="welden" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Matts Devriendt (DELAWARE) </h4>
+                        <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:15 - 19:15 / NL / Audi 4</small>
+                        <small class="text-muted">17:00 - 18:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('img/programma/https.jpg')}}" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Accenture Security Team</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Security war stories from the trenches</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="accenture" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Flavius Bura</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Public Key Infrastructure</h6>
+                        <p class="card-text">Meer dan 50% van alle websites gebruiken Secure HTTP (HTTPS).
+                            Hierbij wordt er gebruik gemaakt van de “Public Key Infrastructure” en digitale
+                            certificaten. De volgende componenten van de “Public Key Infrastructure” komen aan bod:
+                            Asymmetric Key Encryption, Hash Algorithms, Trusted Root Certificate Authorities,
+                            Certificate Revocation methods, enz.
+
+                            Inclusief demo over hoe je een website beveiligd door gebruik te maken van
+                            digitale certificaten.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">19:30 - 20:30 / NL / Audi 4</small>
+                        <small class="text-muted">17:00 - 18:00 / Audi 4</small>
                     </div>
                 </div>
+
             </div>
 
-            <img src="img/programma/workshops.svg" alt="" class="icon"/>
-            <h2>WORKSHOPS</h2>
+            <div class="card-deck">
+
+                <div class="card">
+                    <img class="card-img-top" src="{{asset('img/programma/Code-Attacking-Injecting-XL.jpg')}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Inti De Ceukelaire (INTIGRITI) </h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Creative Hacking: finding unique bugs </h6>
+                        <p class="card-text">Bedrijven zoals Google en Facebook belonen duizenden dollars aan
+                            wie hun systemen kan kraken. Hoe begin je eraan? Veilige frameworks lossen veel op,
+                            maar wat glipt er nog door de mazen van het net? In deze sessie leer je denken als
+                            een hacker met een tal van voorbeelden uit de praktijk! </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">18:00 - 19:00 / Audi 1</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top d-block" src="{{asset('img/programma/social-engineering.jpg')}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Erik Vanderhasselt</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">OSINT workshop</h6>
+                        <p class="card-text">OSINT is de verzamelnaam voor een reeks technieken die gebruikt
+                            worden voor het verzamelen van informatie over het doelwit. Dit kan gaan van media
+                            artikels tot social media. Op het einde van de workshop kan de deelnemer een reeks
+                            bronnen ondervragen die toelaten een analyse uit te voeren om een social engineering
+                            aanval en/of een hacking campagne op te zetten. </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">19:00 - 20:00 / C.209</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="program_header">
+                <img src="img/programma/workshops.svg" alt="" class="icon"/>
+                <h2 class="pixText">WORKSHOPS/EXPERIENCES</h2>
+            </div>
             <hr>
+
             <div class="card-deck">
                 <div class="card">
                     <img class="card-img-top" src="img/programma/rest.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications,
-                            sharing the same REST backend (hands-on)</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="toreon2" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Inti De Ceukelaire (INTIGRITI)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Hacking workshop</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:15 - 19:15 / NL / Lokaal A.0.011</small>
+                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
+
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/wireshark.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/programma/create.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Erik Vanderhasselt (Wireshark)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="wireshark" class="card-link showOverlay">Meer info...</a>
-                        <a target="_blank" href="{{asset("publications/2017_Wireshark.pdf")}}">
-                            <button type="button" class="btn btn-primary">Download presentatie</button>
-                        </a>
+                        <h4 class="card-title">Create corner</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Fablab & Medialab</h6>
+                        <p class="card-text">Van een game maken in Unity tot robots bouwen: Leef je uit in onze
+                            create corner, voorzien van de laatste nieuwe technologie!</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">19:30 - 20:30 / NL / Lokaal C.2.209</small>
+                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
             </div>
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/capturetheflag.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/programma/vr.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title">Capture the flag</h4>
-                        <h6 class="card-subtitle mb-2 text-muted"></h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="ctf" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">VR Room</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Immerse yourself!</h6>
+                        <p class="card-text">Kom langs bij de stand van ons enige echt Medialab en ervaar VR
+                            aan de hand van de vele headsets die beschkbaar zijn: HTC Vive Pro, Oculus,
+                            Playstation VR,... Van kogels ontwijken in Superhot tot ritmisch dansen met
+                            lightsabers in Beatsaber, alles is mogelijk in VR.
+                            Come get your mind blown!
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:30 - doorlopend // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="img/programma/create.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">Create corner</h4>
-                        <h6 class="card-subtitle mb-2 text-muted"></h6>
-                        <!--<p class="card-text"></p>-->
-                        <a href="" id="createcorner" class="card-link showOverlay">Meer info...</a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Vanaf 15u - doorlopend // Create corner</small>
-                    </div>
-                </div>
-            </div>
 
-            <img src="img/programma/gaming.svg" alt="" class="icon"/>
-            <h2>GAMING</h2>
+            </div>
+            <div class="program_header">
+                <img src="img/programma/gaming.svg" alt="game controller" class="icon"/>
+                <h2 class="pixText">GAMING COMPETITION</h2>
+            </div>
             <hr>
+
             <br>
             <div class="alert alert-info program_alert">
                 <strong>Opgelet!</strong> Er wordt 1 stopcontact en 1 internetkabel voorzien per persoon. Zorg dus voor
@@ -292,61 +300,58 @@
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/csgo-photo.png" alt="CS:GO">
+                    <img class="card-img-top" src="{{asset('img/programma/csgo-photo.png')}}" alt="CS:GO">
                     <div class="card-body">
                         <h4 class="card-title">CS:GO</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="csgo" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/lol-photo.png" alt="League of Legends">
+                    <img class="card-img-top" src="{{asset('img/programma/lol-photo.png')}}" alt="League of Legends">
                     <div class="card-body">
                         <h4 class="card-title">League of Legends</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/rocketleague-photo.jpg" alt="Rocket League">
+                    <img class="card-img-top" src="{{asset('img/programma/rocketleague-photo.jpg')}}" alt="Rocket League">
                     <div class="card-body">
                         <h4 class="card-title">Rocket League</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
+                        <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
             </div>
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/fifa-photo.jpg" alt="FIFA 18">
+                    <img class="card-img-top" src="{{asset('img/programma/fifa-photo.jpg')}}" alt="FIFA 19">
                     <div class="card-body">
-                        <h4 class="card-title">FIFA</h4>
+                        <h4 class="card-title">FIFA 2019</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
-                        <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
+
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/supersmashbros-photo.jpg" alt="Super Smash Bros">
+                    <img class="card-img-top" src="{{asset('img/programma/smash.jpg')}}" alt="Super Smash Bros">
                     <div class="card-body">
-                        <h4 class="card-title">Super Smash Bros</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">WII U</h6>
-                        <a href="" id="ssb" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Super Smash Bros Ultimate</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Nintendo Switch</h6>
+
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -354,10 +359,9 @@
                     <div class="card-body">
                         <h4 class="card-title">Hearthstone</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 21u // Grote zaal</small>
+                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -366,46 +370,54 @@
 
     <section id="corners">
         <div class="sectionwrapper">
-            <h2>CORNERS</h2>
+            <h2 class="pixText">CORNERS</h2>
             <ul>
                 <li>
-                    <button id="hack" class="showOverlay">
-                        <img src="img/corners/hack.png" alt=""/>
+                    <button id="hack" class="showOverlay corner">
+                        <img src="img/corners/hack.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Hack</div>
                     </button>
                 </li>
                 <li>
-                    <button id="casual" class="showOverlay">
-                        <img src="img/corners/casual.png" alt=""/>
+                    <button id="casual" class="showOverlay corner">
+                        <img src="img/corners/casual.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Casual</div>
                     </button>
                 </li>
                 <li>
-                    <button id="create" class="showOverlay">
-                        <img src="img/corners/create.png" alt=""/>
+                    <button id="create" class="showOverlay corner">
+                        <img src="img/corners/create.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Create</div>
                     </button>
                 </li>
                 <li>
-                    <button id="competitive" class="showOverlay">
-                        <img src="img/corners/play.png" alt=""/>
+                    <button id="competitive" class="showOverlay corner">
+                        <img src="img/corners/play.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Competitive</div>
                     </button>
                 </li>
                 <li>
-                    <button id="food" class="showOverlay">
-                        <img src="img/corners/food.png" alt=""/>
+                    <button id="food" class="showOverlay corner">
+                        <img src="img/corners/food.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Food</div>
                     </button>
                 </li>
                 <li>
-                    <button id="learn" class="showOverlay">
-                        <img src="img/corners/learn.png" alt=""/>
+                    <button id="learn" class="showOverlay corner">
+                        <img src="img/corners/learn.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Learn</div>
                     </button>
                 </li>
                 <li>
-                    <button id="vr" class="showOverlay">
-                        <img src="img/corners/VR.png" alt=""/>
+                    <button id="vr" class="showOverlay corner">
+                        <img src="img/corners/VR.png" alt="" class="corner-image"/>
+                        <div class="corner-text">VR</div>
                     </button>
                 </li>
                 <li>
-                    <button id="teamspeak" class="showOverlay">
-                        <img src="img/corners/teamspeak.png" alt=""/>
+                    <button id="teamspeak" class="showOverlay corner">
+                        <img src="img/corners/teamspeak.png" alt="" class="corner-image"/>
+                        <div class="corner-text">Teamspeak</div>
                     </button>
                 </li>
             </ul>
@@ -414,8 +426,8 @@
 
     <section id="video">
         <iframe class="fbvideo"
-                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F1923912754497269%2F&show_text=0&width=560"
-                width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F2068042613417615%2F&width=560&show_text=false&height=314"
+                width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowTransparency="true" allowFullScreen="true"></iframe>
     </section>
 
@@ -423,24 +435,24 @@
         <div class="layer">
             <div class="locatie_center">
                 <div>
-                    <h2>LOCATIE</h2>
+                    <h2 class="pixText">LOCATIE</h2>
                     <p>Nijverheidskaai 170
                         <br>1070 Anderlecht</p>
                     <ul>
                         <li>
-                            <button id="fietsen" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=bicycling" target="_blank" id="fietsen" class="showOverlay">
                                 <img src="img/locatie/fiets.svg" alt=""/>
-                            </button>
+                            </a>
                         </li>
                         <li>
-                            <button id="openbaar" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=transit" target="_blank" id="openbaar" class="showOverlay">
                                 <img src="img/locatie/trein.svg" alt=""/>
-                            </button>
+                            </a>
                         </li>
                         <li>
-                            <button id="auto" class="showOverlay">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Nijverheidskaai+170,+1070+Anderlecht&travelmode=driving" target="_blank" id="auto" class="showOverlay">
                                 <img src="img/locatie/auto.svg" alt=""/>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -484,17 +496,5 @@
         </div>
     </div>
 </footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-<script src="js/navbar-fixed.js"></script>
-<script src="js/script2017.js"></script>
-
 </body>
-
 </html>
