@@ -64,17 +64,6 @@
                 </span>
             @endif
         </div>
-        <div class="form-group row {{ $errors->has('steamid') ? ' has-error' : '' }}">
-            <label for="inputLastName" class="col-md-4 control-label">SteamID</label>
-            <div class="col-md-4">
-                <input type="text" name="steamid" class="form-control" id="steamid" placeholder="steamid" value="{{ old('steamid') }}">
-            </div>
-            @if ($errors->has('steamid'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('steamid') }}</strong>
-                </span>
-            @endif
-        </div>
         <div class="form-group row {{ $errors->has('password') ? ' has-error' : '' }}">
             <label for="inputPassword" class="col-md-4 control-label">Wachtwoord</label>
           <div class="col-md-4">

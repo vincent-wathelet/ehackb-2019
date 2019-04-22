@@ -218,19 +218,6 @@ class RegistrationController extends Controller
         return redirect("/show");
     }
 
-    public function editSteamID(Request $request)
-    {
-        if (Auth::check()) {
-            $user = Auth::user();
-            $user->steamid = $request->input("steamid");
-            $user->save(); //update SteamID
-        }
-        else {
-            return redirect("/login");
-        }
-        return redirect("/show");
-    }
-  
     //poging tot games beschikbaar maken na inloggen
 /*    public function storeTeamExistingUser(RegisterTeamRequest $request)
 {
@@ -298,7 +285,6 @@ class RegistrationController extends Controller
         $user->email = $request->input('email');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
-        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->reminderMail = $request->input('reminderemail');
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
@@ -460,7 +446,6 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
-        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user
@@ -511,7 +496,6 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
-        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user
@@ -585,7 +569,6 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
-        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user

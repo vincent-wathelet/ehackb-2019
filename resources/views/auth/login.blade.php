@@ -1,6 +1,6 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
-@section('title')
+@section('head')
 
     <title>Login</title>
 
@@ -8,10 +8,12 @@
 
 @section('content')
 
-  <div class="card loginCard">
-    <div class="card-body">
-      <img class="card-img-top" src="img/ehackb.png" alt="Card image cap">
-        <form method="POST" action="{{ url('/login') }}">
+  <div class="card  px-0  mx-auto py-5 my-5 card-with">
+    
+        <div class=" card-image-top mx-auto ">
+            <img class="rounded-circle" src="img/ehackbv6logo.png" alt="ehackb logo v6">
+        </div>
+        <form class="col-md-10 mx-auto mt-5 " method="POST" action="{{ url('/login') }}">
             {{ csrf_field() }}
             <h2 class="text-center">Login</h2>
 
@@ -25,9 +27,9 @@
                 <label for="email" class="control-label">E-Mail</label>
                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                     @if ($errors->has('email'))
-                        <span class="help-block">
-              <strong>{{ $errors->first('email') }}</strong>
-            </span>
+                            <div class="text-danger row mt-3">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </div>
                     @endif
             </div>
 
@@ -35,9 +37,9 @@
                 <label for="password" class="control-label">Wachtwoord</label>
                     <input id="password" type="password" class="form-control" name="password" required>
                     @if ($errors->has('password'))
-                        <span class="help-block">
+                        <div class="alert alert-danger mt-5 inline-box">
               <strong>{{ $errors->first('password') }}</strong>
-            </span>
+                        </div>
                     @endif
             </div>
 
@@ -50,23 +52,26 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" id="submitbutton" class="btn btn-primary">
-                    Login
-                </button>
-
-                <a id="forgotPwd" class="btn btn-link" href="{{ url('/password/reset') }}">
-                    Wachtwoord vergeten?
-                </a>
-
-                <a id="newAcc" class="btn btn-link" href="{{ url('/new') }}">
-                    <strong>Nog geen account? Registreer hier.</strong>
-                </a>
-
+                    <div class="row ">
+                        <button type="submit" id="submitbutton" class="btn btn-primary mx-auto">
+                            Login
+                        </button>
+                    </div>
+                    
+                    <div class="row">
+                        <a id="forgotPwd" class="btn btn-link mx-auto" href="{{ url('/password/reset') }}">
+                            Wachtwoord vergeten?
+                        </a>
+                    </div>
+                    <div class="row ">
+                        <a id="newAcc" class="btn btn-link mx-auto" href="{{ url('/new') }}">
+                            <strong>Nog geen account? Registreer hier.</strong>
+                        </a>
+                    </div>
             </div>
         </form>
 
-    </div>
+    
   </div>
-
 
 @endsection

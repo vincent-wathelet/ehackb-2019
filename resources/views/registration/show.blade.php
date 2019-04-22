@@ -1,4 +1,4 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
 @section('title')
     <title>Profiel</title>
@@ -6,22 +6,17 @@
 
 @section('content')
 
-    <div class="card">
-        <div class="card-body">
-            <img class="card-img-top" src="img/ehackb.png" alt="EhackB Logo">
+    <div class="card px-0  mx-auto py-5 my-5 col-md-8">
+        
+                <div class=" card-image-top mx-auto ">
+                    <img class="rounded-circle" src="img/ehackbv6logo.png" alt="EhackB Logo">
+                </div>
+                <div class="card-body">
             <h2 class="text-center">Profiel</h2>
             <ul class="list-group">
                 <li class="list-group-item"><b>Voornaam: </b>{{ $user->firstName }}</li>
                 <li class="list-group-item"><b>Achternaam: </b>{{ $user->lastName }}</li>
-                <form method="POST" action="editSteamID">
-                    {{ csrf_field() }}
-                    <li class="list-group-item"><b>SteamID: </b>
-                        <input type="text" class=“form-control” name="steamid" id="steamid" required value="{{ $user->steamid }}"/>
-                        <button style="margin-left:5px;" id="editSteamID" name="submitbutton" type="submit" class="btn btn-primary">Wijzig SteamID</button>
-
-                    </li>
-
-                </form>
+                
                 <li class="list-group-item"><b>E-mailadres: </b>{{ $user->email }}</li>
                 @if(!empty($user->reminderMail))
                     <li class="list-group-item"><b>Reminder E-mailadres: </b>{{ $user->reminderMail }}</li>
@@ -60,7 +55,7 @@
                                value="{{$activity->name}} ({{date("H:i",strtotime($activity->startDate)) }}u-{{date("H:i",strtotime($activity->endDate))}}u)@if($activity->maxUsers != 9999) - Plaatsen: {{ $activity->maxUsers - $activity->users->count() }} @endif">
                     </div>
                 @endforeach
-                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Activiteiten opslaan</button>
+                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary mt-3">Activiteiten opslaan</button>
             </form>
 
             <h2 class="text-center">Opties</h2>
@@ -76,7 +71,7 @@
                                value="@if ($option->hasPrice){{$option->name . ": €" . number_format($option->price,2) }}@else{{ $option->name . ": gratis" }}@endif">
                     </div>
                 @endforeach
-                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Opties opslaan</button>
+                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary mt-3">Opties opslaan</button>
             </form>
 
         </div>
