@@ -30,12 +30,13 @@ $text-primarycolor: #afb9a7;
 {
     background-color: $text-primarycolor;
 }
-.bg-image-ehackb
+body
 {
     background-image: url('/img/achtergrond.png');
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-origin: content-box;
+    background-size: cover;
 }
 .card-with
 {

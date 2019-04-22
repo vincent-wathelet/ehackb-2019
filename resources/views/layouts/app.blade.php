@@ -20,7 +20,7 @@
         ]); ?>
     </script>
 </head>
-<body class="bg-image-ehackb">
+<body>
 <div id="app" >
     <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
         <div class="container">
