@@ -60,6 +60,25 @@ class ActivitiesTableSeeder extends Seeder
               'description' => '',
               'activityGroupID' => '1'
           ],
+          [
+            'name' => 'Inti De Ceukelaire (INTIGRITI) Hacking workshop | Vanaf 20:00',
+            'maxUsers' => '100',
+            'description' => '',
+            'activityGroupID' => '3'
+        ],
+        [
+            'name' => 'Create corner Fablab & Medialab | Vanaf 20:00',
+            'maxUsers' => '100',
+            'description' => '',
+            'activityGroupID' => '2'
+        ],
+        
+        [
+            'name' => 'VR Room Immerse yourself! | Vanaf 20:00',
+            'maxUsers' => '100',
+            'description' => '',
+            'activityGroupID' => '2'
+        ],
 
       ]);
     }

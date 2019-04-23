@@ -37,23 +37,23 @@
         <div class="collapse navbar-collapse pixText" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#top">Start</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#top">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#registreren">Registreren</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#registreren">Registreren</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#programma">Programma</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#programma">Programma</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#gaming">Gaming</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#gaming">Gaming</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#corners">Corners</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#corners">Corners</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
+                    <a class="nav-link smooth-scroll" href="{{ url('/') }}#locatie">Locatie</a>
                 </li>
                 <!-- Authentication Links -->
                     @if (Auth::guest())
