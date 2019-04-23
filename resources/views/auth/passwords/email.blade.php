@@ -1,4 +1,4 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
 @section('title')
 
@@ -8,10 +8,13 @@
 
 @section('content')
 
-    <div class="card loginCard">
-        <div class="card-body">
-            <img class="card-img-top" src="{{ URL::to('img/ehackb.png') }}" alt="EhackB">
-            <h2 class="text-center">Wachtwoord Resetten</h2>
+    <div class="card  px-0  mx-auto py-5 my-5 card-with">
+        
+            <div class="card-image-top mx-auto">
+            <img class="rounded-circle mx-auto" src="{{ URL::to('img/ehackbv6logo.png') }}" alt="EhackB">
+            </div>
+            <div class="card-body">
+            <h3 class="text-center mt-3 mb-3"><b>Wachtwoord Resetten</b></h3>
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
@@ -29,8 +32,8 @@
                         </span>
                         @endif
                 </div>
-                <div class="form-group">
-                    <button type="submit" id="submitbutton" class="btn btn-primary">
+                <div >
+                    <button type="submit" id="submitbutton" class="btn btn-primary ">
                         Reset link versturen
                     </button>
                 </div>

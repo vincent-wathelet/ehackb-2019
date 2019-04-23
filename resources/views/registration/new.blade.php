@@ -9,7 +9,7 @@
 
 @section('content')
 
-    <div class="card container">
+    <div class="card container mt-5">
         <div class="card-body">
             <div class="row ">
             <img class="card-image-top mx-auto rounded-circle my-3" src="img/ehackbv6logo.png" alt="ehackb logo v6">
@@ -202,6 +202,11 @@
                     
 
                     <div class="form-group gameselection">
+                            <div class="alert alert-danger mt-2" role="alert">
+                            In het geval van een team van 5 spelers moeten er minstens 2 van EhB of HOGENT zijn.<br>
+                            In het geval van een team van 2 spelers moet er minstens 1 van EhB of HOGENT zijn.<br>
+                            Schrijf je ter controle verplicht in met je EhB of Hogent e-mailadres, anders zal je team geweigerd worden.
+                            </div>
                         <label for="inputGameID" class="control-label">Game</label>
                         <select class="form-control" id="inputGameID" name="gameid">
                             @foreach(App\Game::all() as $game)

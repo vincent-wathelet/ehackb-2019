@@ -77,6 +77,7 @@
                 <div class="logo-nav-container">
                     <div class="logo-container">
                         <img src="img/EhackBLogo.png" alt="logo">
+                        <h3 class="pixText eventdatum"> 3 - 4 mei</h3>
                     </div>
                     <div class="selectors pixText">
                         <ul>
@@ -103,11 +104,18 @@
                 <!--
                 <p>EhackBv6 is afgelopen,</p>
                 <p>hou de website in de gaten voor de volgende editie!</p>-->
-
+                @if(Auth::guest())
                 <div class="pixText" style="font-size: 20pt">
                     <a class="p-5" href="{{ url('/login') }}" >Login</a>
                     <a class="p5" href="{{ url('new') }}">Registreer</a>
                 </div>
+                    
+                @else
+                    <div class="pixText" style="font-size: 20pt">
+                        <p class="text-warning">U bent al geregistreerd</p>
+                        <a class="p-5 " href="{{ url('/show') }}" >Wijzig inschrijving</a>
+                    </div>
+                @endif
             </div>
         </div>
 
@@ -130,7 +138,7 @@
                         <p class="card-text">Inclusief demo van een hack en detection met Varonis</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 15:00 - 16:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -141,7 +149,7 @@
                             voor development en system engineering.</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 15:00 - 16:00 / Audi 4</small>
                     </div>
                 </div>
 
@@ -156,7 +164,7 @@
                             Next Generation Firewalls today</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 16:00 - 17:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -173,7 +181,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 16:00 - 17:00 / Audi 4</small>
                     </div>
                 </div>
 
@@ -188,7 +196,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:00 - 18:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 17:00 - 18:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -206,7 +214,7 @@
                             digitale certificaten.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:00 - 18:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 17:00 - 18:00 / Audi 4</small>
                     </div>
                 </div>
 
@@ -226,7 +234,7 @@
                             een hacker met een tal van voorbeelden uit de praktijk! </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:00 - 19:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 18:00 - 19:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -242,7 +250,7 @@
                             aanval en/of een hacking campagne op te zetten. </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">19:00 - 20:00 / C.209</small>
+                        <small class="text-muted">3 mei 19:00 - 20:00 / C.209</small>
                     </div>
                 </div>
 
@@ -262,7 +270,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Hacking workshop</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
 
@@ -275,7 +283,7 @@
                             create corner, voorzien van de laatste nieuwe technologie!</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -294,7 +302,7 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
 
@@ -322,7 +330,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -332,7 +340,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -343,7 +351,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -357,7 +365,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -368,7 +376,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -378,7 +386,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -484,31 +492,37 @@
 <footer>
     <div class="footer-logo">
         <div class="master_logo">
-            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/EhB/ehb-logo.jpg" alt="EhB"></a>
-            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/Signpost/signpost.jpg" alt="Signpost"></a>
-            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Signpost/Acedemic_Software.gif"
-                                                                       alt="AcademicShop"></a>
-            <a href="#" target="_blank"><img src="img/logo/Alliantiefonds/alliantie-metketting.png" alt="Alliantiefonds"></a>
-            <a href="http://www.delaware.pro/nl-nl" target="_blank"><img
-                        src="img/logo/Delaware/Delaware.jpg" alt="Delaware"></a>
-            <a href="https://www.hogent.be/" target="_blank"><img src="img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg"
-                                                                     alt="Hogent"></a>
+            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/Lenovo/lenovo.png" alt="Lenovo"></a>
 
+            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/Signpost/signpost.jpg" alt="Signpost"></a>
+                    
+            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Signpost/Acedemic_Software.gif" alt="AcademicShop"></a>
+            
+            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/EhB/ehb-logo.jpg" alt="EhB"></a>
+            
+            
+            <a href="#" target="_blank"><img src="img/logo/Alliantiefonds/alliantie-metketting.png" alt="Alliantiefonds"></a>      
+            
+            <a href="https://www.hogent.be/" class="hogent" target="_blank"><img src="img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg"
+                                                                  alt="Hogent"></a>
+              
         </div>
         <div class="mid_logo">
-            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/Lenovo/lenovo.png" alt="Lenovo"></a>
-            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/Innoviris/innoviris.png"
-                                                                      alt="Innoviris Brussels"></a>
-            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/Cisco Networking Academy/cisco_logo_large.png" alt="Cisco"></a>
-            <a href="https://www.paloaltonetworks.com" target="_blank"><img src="img/logo/Palo Alto/pan-logo-badge-blue-light-kick-up.jpg" alt="Cisco"></a>
+            
+            
+           <a href="https://www.axxes.com/" target="_blank"><img src="img/logo/axxes/axxes.png" alt="Cisco"></a>
+           <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/Innoviris/innoviris.png"
+            alt="Innoviris Brussels"></a> 
+           
             <a href="https://www.erasmushogeschool.be/nl/stuvo" target="_blank"><img src="img/logo/Stuvo/stuvo-ehb.png" alt="Cisco"></a>
         </div>
         <div class="basic_logo">
+            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/Cisco Networking Academy/cisco_logo_large.png" alt="Cisco"></a>   
+            <a href="https://www.paloaltonetworks.com" target="_blank"><img src="img/logo/Palo Alto/pan-logo-badge-blue-light-kick-up.jpg" alt="Cisco"></a>
+            <a href="http://www.delaware.pro/nl-nl" target="_blank"><img src="img/logo/Delaware/Delaware.jpg" alt="Delaware"></a>
             <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet/Belnet.jpg" alt="Belnet"></a>
-            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/Cisco - Meraki/cisco_meraki.jpg"
-                                                                               alt="Cisco - Meraki"></a>
-            <a href="https://honim.typepad.com/biasc/" target="_blank"><img src="img/logo/BIASC/BIASC.png"
-                                                                                 alt="BIASC"></a>
+            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/Cisco - Meraki/cisco_meraki.jpg" alt="Cisco - Meraki"></a>
+            <a href="https://honim.typepad.com/biasc/" target="_blank"><img src="img/logo/BIASC/BIASC.png" alt="BIASC"></a>
         </div>
     </div>
 </footer>
