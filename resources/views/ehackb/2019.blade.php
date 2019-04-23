@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 
 <html lang="nl">
@@ -498,3 +499,17 @@
 </body>
 
 </html>
+=======
+@extends("layouts/app")
+
+@section('head')
+
+
+
+@endsection
+
+
+@section('content')
+
+@endsection
+>>>>>>> d357e98fcc51df1a5f9a69ea6b5a436dbe872701

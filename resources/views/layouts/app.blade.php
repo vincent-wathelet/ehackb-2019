@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    @yield('head')
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -20,49 +20,59 @@
         ]); ?>
     </script>
 </head>
-<body>
-<div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+<body class="bg-image-ehackb">
+<div id="app" >
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
         <div class="container">
             <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+               
 
                 <!-- Branding Image -->
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
-
+            <!-- Collapsed Hamburger -->
+            <button class="navbar-toggler"  type="button" data-toggle="collapse"
+                        data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="app-navbar-collapse">
+               
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#top">Start</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#programma">Programma</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#corners">Corners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#locatie">Locatie</a>
+                </li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('new') }}">Registreren</a></li>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false">
-                                {{ Auth::user()->firstname }} <span class="caret"></span>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->firstName. " ".Auth::user()->lastName }}
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @if (Auth::user()->isAdmin) 
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ url('/logout') }}"
+                            <a class="dropdown-item" href="{{ url('/admin') }}">admin</a> 
+                                
+                            @endif
+                                <a class="dropdown-item" href="{{ url('/show') }}">Profiel</a> 
+                                <a class="dropdown-item" href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Logout
@@ -72,12 +82,15 @@
                                           style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
-                                </li>
-                            </ul>
+                                
+                            </div>
                         </li>
                     @endif
                 </ul>
+                
+                
             </div>
+            
         </div>
     </nav>
 
