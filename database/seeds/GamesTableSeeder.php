@@ -13,22 +13,46 @@ class GamesTableSeeder extends Seeder
     {
         DB::table('games')->insert([
             [
-            'name'=>'League of Legends',
+            'name'=>'League of Legends 5vs5',
             'isSinglePlayer'=>false,
             'maxPlayers'=>5,
-            'MaxTeams'=>14
+            'MaxTeams'=>16
             ],
             [
             'name'=>'Counter Strike Global Offensive',
             'isSinglePlayer'=>false,
             'maxPlayers'=>5,
-            'MaxTeams'=>14
+            'MaxTeams'=>16
             ],
             [
             'name'=>'Hearthstone',
             'isSinglePlayer'=>true,
             'maxPlayers'=>1,
-            'MaxTeams'=>30
+            'MaxTeams'=>12
+            ],
+            [
+                'name'=>'FIFA 2019',
+                'isSinglePlayer'=>true,
+                'maxPlayers'=>1,
+                'MaxTeams'=>16
+            ],
+            [
+                'name'=>'Rocket League 2vs2',
+                'isSinglePlayer'=>false,
+                'maxPlayers'=>2,
+                'MaxTeams'=>16
+            ],
+            [
+                'name'=>'Old School Runescape',
+                'isSinglePlayer'=>true,
+                'maxPlayers'=>1,
+                'MaxTeams'=>20
+            ],
+            [
+                'name'=>'Fortnite 2vs2',
+                'isSinglePlayer'=>false,
+                'maxPlayers'=>2,
+                'MaxTeams'=>16
             ]
         ]);
     }

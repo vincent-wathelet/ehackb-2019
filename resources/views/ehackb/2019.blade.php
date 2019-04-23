@@ -484,35 +484,31 @@
 <footer>
     <div class="footer-logo">
         <div class="master_logo">
-            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/ehb-logo.jpg" alt="EhB"></a>
-            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/signpost.jpg" alt="Signpost"></a>
-            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Acedemic_Software.gif"
+            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/EhB/ehb-logo.jpg" alt="EhB"></a>
+            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/Signpost/signpost.jpg" alt="Signpost"></a>
+            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Signpost/Acedemic_Software.gif"
                                                                        alt="AcademicShop"></a>
-            <a href="https://www.agoria.be/" target="_blank"><img src="img/logo/agoria.jpg" alt="Agoria"></a>
-            <a href="http://www.switchpoint.be/" target="_blank"><img
-                        src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint"></a>
-            <a href="http://www.apc.com/be/en/" target="_blank"><img src="img/logo/APC_by_Schneider_Electric_3.png"
-                                                                     alt="APC"></a>
-            <div class="stylelabs-container">
-                <p>Join us:<a href="https://careers.stylelabs.com/" target="_blank">careers.stylelabs.com</a></p>
-                <a href="https://stylelabs.com/" target="_blank"><img class="stylelabs" src="img/logo/stylelabs.png"
-                                                                      alt="Stylelabs"></a>
-            </div>
-            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/lenovo.png" alt="Lenovo"></a>
+            <a href="#" target="_blank"><img src="img/logo/Alliantiefonds/alliantie-metketting.png" alt="Alliantiefonds"></a>
+            <a href="http://www.delaware.pro/nl-nl" target="_blank"><img
+                        src="img/logo/Delaware/Delaware.jpg" alt="Delaware"></a>
+            <a href="https://www.hogent.be/" target="_blank"><img src="img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg"
+                                                                     alt="Hogent"></a>
+
         </div>
         <div class="mid_logo">
-            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/innoviris.png"
+            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/Lenovo/lenovo.png" alt="Lenovo"></a>
+            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/Innoviris/innoviris.png"
                                                                       alt="Innoviris Brussels"></a>
-            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/cisco_logo_large.png" alt="Cisco"></a>
-            <a href="http://www.teamspeak.com/?tour=yes" target="_blank"><img src="img/logo/teamspeak_horizontal.png"
-                                                                              alt="Teamspeak"></a>
+            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/Cisco Networking Academy/cisco_logo_large.png" alt="Cisco"></a>
+            <a href="https://www.paloaltonetworks.com" target="_blank"><img src="img/logo/Palo Alto/pan-logo-badge-blue-light-kick-up.jpg" alt="Cisco"></a>
+            <a href="https://www.erasmushogeschool.be/nl/stuvo" target="_blank"><img src="img/logo/Stuvo/stuvo-ehb.png" alt="Cisco"></a>
         </div>
         <div class="basic_logo">
-            <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet.png" alt="Belnet"></a>
-            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/cisco_meraki.jpg"
+            <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet/Belnet.jpg" alt="Belnet"></a>
+            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/Cisco - Meraki/cisco_meraki.jpg"
                                                                                alt="Cisco - Meraki"></a>
-            <a href="https://www.redcorp.com/nl/Home/Index" target="_blank"><img src="img/logo/Redcorp_logo.png"
-                                                                                 alt="Redcorp"></a>
+            <a href="https://honim.typepad.com/biasc/" target="_blank"><img src="img/logo/BIASC/BIASC.png"
+                                                                                 alt="BIASC"></a>
         </div>
     </div>
 </footer>
