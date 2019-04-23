@@ -32,7 +32,7 @@
 
 <body id="top">
 <header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark mb-5" style="background-color: #1D1D1B;">
         <a class="navbar-brand" href="#top">
             <img src="img/EhackBLogo.png" width="30" height="30" alt="logo">
         </a>
@@ -99,9 +99,15 @@
         <img id="fade" src="img/registreren/fade.png" alt="fade">
         <div class="register_center">
             <div>
-                <img src="img/registreren/logoSimple.svg" alt="Logo"/>
+                <img src="img/registreren/logoSimple.svg" alt="Logo"/>`
+                <!--
                 <p>EhackBv6 is afgelopen,</p>
-                <p>hou de website in de gaten voor de volgende editie!</p>
+                <p>hou de website in de gaten voor de volgende editie!</p>-->
+
+                <div class="pixText" style="font-size: 20pt">
+                    <a class="p-5" href="{{ url('/login') }}" >Login</a>
+                    <a class="p5" href="{{ url('new') }}">Registreer</a>
+                </div>
             </div>
         </div>
 

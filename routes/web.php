@@ -30,7 +30,7 @@ Route::group(['middleware' => 'web'], function () {
      Route::get('/register', 'RegistrationController@new');
 
     // Mailing handlers
-     Route::get('invite/{token}', 'RegistrationController@createMailInvite');
+     // Route::get('invite/{token}', 'RegistrationController@createMailInvite');
      Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
 
     // Update activities
@@ -47,7 +47,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 
     // Edit steamid
-    Route::post('editSteamID', 'RegistrationController@editSteamID');
+    //Route::post('editSteamID', 'RegistrationController@editSteamID');
 
     // Store a new Mail invited
     Route::post('registermail', 'RegistrationController@storeMailInvite')->name('registermail');

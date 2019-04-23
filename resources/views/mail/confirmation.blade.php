@@ -21,11 +21,12 @@
 				<li>{{ $activity->name }}</li>
 			@endforeach
 		</ul>
-    @endif
+		@endif
+		{{-- //TODO de ingechreven gam terug geven
     @if (!$user->team->isEmpty())
 			<p>En u neemt deel aan de {{ $user->team[0]->game->name }} competitie met uw
 				team "<i>{{ $user->team[0]->name }}</i>"</p>
 		@endif
-    <a href="{{url('confirmation',['token' => $token])}}">Confirmeer hier je email adres!</a></div>
+    <a href="{{url('confirmation',['token' => $token])}}">Confirmeer hier je email adres!</a></div>--}}
 </body>
 </html>

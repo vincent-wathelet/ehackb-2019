@@ -13,6 +13,7 @@ use App\User;
 use App\Team;
 use App\Activity;
 use App\Option;
+use App\usergame;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -32,7 +33,6 @@ class RegistrationController extends Controller
             $user = Auth::user();
             $allActivities = Activity::orderBy('startDate','asc')->get();
             $allOptions = Option::all();
-
             $activities = array();
             $options = array();
 
@@ -481,7 +481,28 @@ class RegistrationController extends Controller
                 }
             }
         }
+        if($request->has('inschrijvingtype'))
+        {
+            $usergame = new usergame;
+            $usergame->typeGamer = $request->input('inschrijvingtype');
+            $usergame->userID = $user->id;
+            if($request->input('inschrijvingtype') == 'competitieve'){
+            $usergame->gameID = $request->input('gameid');
+            $usergame->teamname = $request->input('teamname');
 
+
+            }
+            else
+            {
+                $usergame->gameID = 0;
+            }
+            $usergamesaved = $usergame->save();
+        }
+        if(!$usergamesaved)
+        {
+            return redirect()->back()->with('err', 'Kon de gebruiker niet inschrijven voor game.');
+        }
+        
         //sendmail
         $this->mailConfirm($user);
         $msg = 'Registratie gelukt! Er is een bevestigingsmail gestuurd naar je mailbox!';

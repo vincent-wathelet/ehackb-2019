@@ -12,7 +12,9 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <script src="js/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style2019.css">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -22,44 +24,41 @@
 </head>
 <body>
 <div id="app" >
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
-        <div class="container">
-            <div class="navbar-header">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
+        <a class="navbar-brand" href="#top">
+            <img src="img/EhackBLogo.png" width="30" height="30" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-               
+        <div class="collapse navbar-collapse pixText" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#top">Start</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#registreren">Registreren</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#programma">Programma</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#gaming">Gaming</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smooth-scroll" href="#corners">Corners</a>
+                </li>
 
-                <!-- Branding Image -->
-
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-            </div>
-            <!-- Collapsed Hamburger -->
-            <button class="navbar-toggler"  type="button" data-toggle="collapse"
-                        data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="app-navbar-collapse">
-               
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#top">Start</a>
+                    <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#programma">Programma</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#corners">Corners</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="{{ url('/')}}#locatie">Locatie</a>
-                </li>
-                    <!-- Authentication Links -->
+                <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('new') }}">Registreren</a></li>
+                       
                     @else
                     <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,11 +85,7 @@
                             </div>
                         </li>
                     @endif
-                </ul>
-                
-                
-            </div>
-            
+            </ul>
         </div>
     </nav>
 
@@ -99,6 +94,7 @@
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+<script src="/js/registratie.js"></script>
 @yield('scripts')
 </body>
 </html>

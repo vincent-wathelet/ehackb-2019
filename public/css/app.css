@@ -35,6 +35,10 @@ body {
   max-width: 420px;
 }
 
+.gameselection {
+  display: none;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

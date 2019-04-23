@@ -4,6 +4,7 @@
 
     <title>Registratie</title>
 
+    
 @endsection
 
 @section('content')
@@ -18,10 +19,6 @@
                 <a href="https://www.facebook.com/EhackB/">Facebook</a> <strong>(snel)</strong>
                 of via <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a> <strong>(traag)</strong>.
             </p>
-            <div class="alert alert-warning text-center">
-                Registreer niet als je een invite verwacht van je teamleider! Je emailadres kan slechts 1 keer gebruikt
-                worden.
-            </div>
 
             @if (count($errors) > 0)
                 @foreach ($errors->all() as $error)
@@ -154,7 +151,7 @@
                                    aria-label="Checkbox for following text input" {{  ($talk->maxUsers - $talk->users->count()) <= 0 ? 'disabled' : '' }}>
                          </span>
                             <input type="text" class="form-control" disabled aria-label="Text input with checkbox"
-                                   value="{{$talk->name}} ({{date("H:i",strtotime($talk->startDate)) }} - {{date("H:i",strtotime($talk->endDate)) }})@if($talk->maxUsers != 9999) - Plaatsen: {{ $talk->maxUsers - $talk->users->count() }} @endif">
+                                   value="{{$talk->name}} @if($talk->maxUsers != 9999) - Plaatsen: {{ $talk->maxUsers - $talk->users->count() }} @endif">
                         </div>
                     @endforeach
 
@@ -167,7 +164,7 @@
                                    aria-label="Checkbox for following text input" {{  ($workshop->maxUsers - $workshop->users->count()) <= 0 ? 'disabled' : '' }}>
                          </span>
                             <input type="text" class="form-control" disabled aria-label="Text input with checkbox"
-                                   value="{{$workshop->name}} ({{date("H:i",strtotime($workshop->startDate)) }} - {{date("H:i",strtotime($workshop->endDate))}})@if($workshop->maxUsers != 9999) - Plaatsen: {{ $workshop->maxUsers - $workshop->users->count() }} @endif">
+                                   value="{{$workshop->name}} @if($workshop->maxUsers != 9999) - Plaatsen: {{ $workshop->maxUsers - $workshop->users->count() }} @endif">
                         </div>
                     @endforeach
 
@@ -191,24 +188,51 @@
 
                     <h2 class="text-center">Games</h2>
 
-                    <div class="alert alert-warning" role="alert">
-                        <strong>Let op!</strong> Deze keuze is definitief.
-                    </div>
 
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label for="formSelect" class="control-label">Maak je keuze</label>
-                        <select class="form-control" id="formSelect">
-                            <option selected value="1">Ik schrijf mij enkel in (zonder competitieve game)</option>
-                            <option value="2">Ik schrijf mij ook in voor een competitieve game.</option>
+                        <select class="form-control inschrijvingtype" id="formSelect" name="inschrijvingtype">
+                            <option selected value="niet-competitieve">Ik schrijf mij enkel in (zonder competitieve game)</option>
+                            <option value="competitieve">Ik schrijf mij ook in voor een competitieve game.</option>
                             {{--<option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek
                                 team.
                             </option>--}}
                         </select>
                     </div>
+                    
 
+                    <div class="form-group gameselection">
+                        <label for="inputGameID" class="control-label">Game</label>
+                        <select class="form-control" id="inputGameID" name="gameid">
+                            @foreach(App\Game::all() as $game)
+                                @if($game->isFull())
+                                    <option value={{$game->id}} disabled>{{$game->name}} - volzet</option>
+                                @else
+                                    <option id="optionID" data-maxplayers="{{$game->maxPlayers}}"
+                                            value={{$game->id}}>{{$game->name}}</option>
+                                @endif
+                            @endforeach
+                        </select>
+
+                        <div class="alert alert-warning" role="alert">
+                            <strong>Let op!</strong> De plaatsen voor de computitie zijn beperkt. Enkel wanneer het volledig team ingschreven is, is je inschrijving geldig.
+                            </div>
+
+                        <label for="inputReminderEmail" class="control-label">Team name</label>
+                                <input type="text" name="teamname" class="form-control" id="teamname"
+                                       placeholder="teamname" />
+
+                                       <div class="alert alert-warning" role="alert">
+                                        Gelieve een team invullen als je deelneemt aan een teamcompitie
+                                        <strong>Let op!</strong> De schrijfwijze dient indentiek te zijn bij alle teamspelers.
+                                    </div>
+                    
+
+                        
+                    </div>
                     <!-- NEW TEAM -->
 
-                    <div id="createTeam">
+                    {{--<div id="createTeam">
 
                         <h4 class="text-center">Maak je team aan</h4>
 
@@ -250,8 +274,7 @@
                                 moeten ingevuld zijn!
                             </small>
                         </div>
-                    </div>
-
+                    </div>--}}
                     {{--<div id="joinTeam">
 
                         <h4 class="text-center">Sluit je aan bij een bestaand team</h4>
@@ -281,24 +304,16 @@
                     </div>--}}
 
 
-                    <input type="submit" name="submitbutton" id="submit" class="btn btn-primary" value="Inschrijven">
+                    <input type="submit" name="submitbutton" id="submit" class="btn btn-primary mt-3" value="Inschrijven">
 
                 </div>
 
-                <nav aria-label="Registration Navigation">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled" id="itemRegisterPrevious"><a class="page-link" href="">←</a></li>
-                        <li class="page-item active" id="itemRegister1"><a class="page-link" href="">1</a></li>
-                        <li class="page-item" id="itemRegister2"><a class="page-link" href="">2</a></li>
-                        <li class="page-item" id="itemRegister3"><a class="page-link" href="">3</a></li>
-                        <li class="page-item" id="itemRegisterNext"><a class="page-link" href="">→</a></li>
-                    </ul>
-                </nav>
+            
 
             </form>
         </div>
     </div>
-
+    
 
 @endsection
 
