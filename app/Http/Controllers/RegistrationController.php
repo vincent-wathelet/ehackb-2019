@@ -46,6 +46,20 @@ class RegistrationController extends Controller
                 $options = $user->options()->get();
 
             }
+            if(!empty($user->game()))
+            {
+                $game = $user->game()->get()->first();
+                if($game->typeGamer == 'competitieve')
+                {
+                    $team = usergame::where('teamname',$game->teamname);
+                    return view('registration.show')
+                    ->with('user', $user)->with('activities', $activities)
+                    ->with('options', $options)->with('allActivities', $allActivities)
+                    ->with('allOptions', $allOptions)
+                    ->with('game',$game)->with('team',$team);
+                }
+            }
+            /*
             if ($user->hasTeam) {
                 $team = $user->team()->get()->first();
                 $game = $team->game()->get()->first();
@@ -60,9 +74,9 @@ class RegistrationController extends Controller
                     }
                     return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('team', $team)->with('game', $game)->with('members', $members)->with('allActivities', $allActivities)->with('allOptions', $allOptions);
                 }
-            } else {
-                return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('allActivities', $allActivities)->with('allOptions', $allOptions);
-            }
+            } else {*/
+                return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('allActivities', $allActivities)->with('allOptions', $allOptions)->with('game',$game);
+            //}
         } else {
             // Make unauthorized page
             return redirect('/login');
@@ -70,6 +84,7 @@ class RegistrationController extends Controller
     }
 
     public function new(){
+        if(!Auth::check()){
         $games = Game::orderBy('name')->where('maxPlayers', '>', 1)->get();
         $teams;
         $collection2 = Team::where('gameID', $games[0]->id)->where('isPublic', '1')->get();
@@ -106,6 +121,11 @@ class RegistrationController extends Controller
         $view->with('talks', $talks)->with('workshops', $workshops);
 
         return $view->with('options', Option::all());
+    }
+    else
+    {
+        return redirect('/show');
+    }
     }
 
     public function create()

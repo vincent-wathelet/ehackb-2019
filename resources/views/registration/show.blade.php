@@ -22,7 +22,20 @@
                     <li class="list-group-item"><b>Reminder E-mailadres: </b>{{ $user->reminderMail }}</li>
                 @endif
             </ul>
-
+            <h2 class="text-center">Gaming</h2>
+            <ul class="list-group">
+                @if(!empty($game))
+                    <li class="list-group-item"><b>type gamer: </b>{{ $game->typeGamer}}</li>
+                    @if($game->typeGamer == 'competitieve')
+                    <li class="list-group-item"><b>game: </b>{{ $game->game()->get()->first()->name}}</li>
+                    <li class="list-group-item"><b>teamname: </b>{{ $game->teamname}}</li>
+                    @endif
+                 @else
+                 <h2 class="text-warning text-center my-5" >Geen inschrijving gevonden</h2>
+                @endif
+                
+            </ul>
+            {{--
             @if(isset($user->team) && isset($user->team[0]->game))
                 <h2 class="text-center">Team</h2>
                 <ul id="teamProfile" class="list-group">
@@ -41,7 +54,7 @@
                     @endif
                 </ul>
             @endif
-
+                --}}
             <h2 class="text-center">Activiteiten</h2>
             <form class="profileEdit" method="POST" action="editActivities">
                 {{ csrf_field() }}

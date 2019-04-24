@@ -193,7 +193,11 @@
                     <img class="card-img-top" src="img/programma/internet-of-things-IoT.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Matts Devriendt (DELAWARE) </h4>
-                        <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT: Why before how</h6>
+                        <p class="card-text">Connected is not enough in today’s successful iot stories. Start with why before how. The how part is maybe influenced by the why. 
+                            Combine vision, strategy and iot for strong industry 4.0 business cases. 
+                            During the talk an existing smart farming solution will function as a reference case.
+                            In Roeselare, "Potato valley" for the locals, potato growers make grateful use of AVR’s machines and technology to make planting potatoes and harvesting more efficient.</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">3 mei 17:00 - 18:00 / Audi 1</small>
@@ -348,7 +352,7 @@
                          alt="Rocket League">
                     <div class="card-body">
                         <h4 class="card-title">Rocket League</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
@@ -389,6 +393,19 @@
                         <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
+                
+            </div>
+            <div class="col-sm-4 mx-auto">
+                    <div class="card ">
+                            <img class="card-img-top" src="{{asset('img/programma/Fortnite.jpg')}}" alt="Hearthstone">
+                            <div class="card-body">
+                                <h4 class="card-title">Fortnite</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">PC</h6>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
+                            </div>
+                        </div>
             </div>
         </div>
     </section>
