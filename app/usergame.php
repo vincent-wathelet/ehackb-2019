@@ -8,7 +8,7 @@ class usergame extends Model
 {
   public $table = "usergame";
   protected $fillable = ['typeGamer', 'userID', 'gameID', 'teamname'];
-  public $timestamps = false;
+  
   public function game(){
     return $this->belongsTo('App\Game','gameID','id');
   }

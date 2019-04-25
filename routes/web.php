@@ -43,7 +43,8 @@ Route::group(['middleware' => 'web'], function () {
 
     // Update options
     Route::post('editOptions', 'RegistrationController@editOptions');
-
+    Route::post('editGaming','RegistrationController@editGaming');
+    Route::post('createGaming','RegistrationController@createGaming');
     Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 
     // Edit steamid

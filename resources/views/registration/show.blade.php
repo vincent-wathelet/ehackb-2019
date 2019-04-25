@@ -23,18 +23,50 @@
                 @endif
             </ul>
             <h2 class="text-center">Gaming</h2>
+            @if(!empty($game))
+            <form method="POST" action="editGaming">
+                    {{ csrf_field() }}
+                    <div class="form-group ">
+                    <label for="typeSelect" class="control-label ">inschrijvingtype</label>
+                            <select class="form-control typeprofiel" id="typeSelect" name="inschrijvingtype">
+                                <option @if($game->typeGamer == "niet-competitieve") selected='selected' @endif value="niet-competitieve">niet-competitieve</option>
+                                <option @if($game->typeGamer == "competitieve") selected='selected' @endif value="competitieve">competitieve</option>
+                            </select>
+                    </div>
+                    <div class="gameselection">
+                    <div class="form-group ">
+                            <label for="formSelect" class="control-label">Game</label>
+                                    <select class="form-control" id="gameSelect" name="Game">
+                                        @foreach ($games as $item)
+                                    <option @if($game->gameID == $item->id) selected='selected' @endif value="{{$item->id}}">{{$item->name}}</option>
+                                        @endforeach
+                                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Teamname">Teamname</label>
+                    <input name="teamname" type="text" class="form-control" id="Teamname" placeholder="Teamname" @if(!empty($game->teamname)) value="{{$game->teamname}}"@endif>
+                    </div>
+                    </div>                
+            <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary mt-3">Wijziging oplsaan</button>
+            </form>
+            @if(isset($team)) 
+            <div class="gameselection">
+                     
+            <h4 class="my-3">teamleden 
+                @if(!empty($game->teamname))
+                {{$game->teamname}}
+                @endif</h4>
             <ul class="list-group">
-                @if(!empty($game))
-                    <li class="list-group-item"><b>type gamer: </b>{{ $game->typeGamer}}</li>
-                    @if($game->typeGamer == 'competitieve')
-                    <li class="list-group-item"><b>game: </b>{{ $game->game()->get()->first()->name}}</li>
-                    <li class="list-group-item"><b>teamname: </b>{{ $game->teamname}}</li>
-                    @endif
-                 @else
-                 <h2 class="text-warning text-center my-5" >Geen inschrijving gevonden</h2>
-                @endif
-                
+                @foreach ($team as $item)
+                <li class="list-group-item"><b>name: </b>{{$item->user()->first()->firstName}} {{$item->user()->first()->lastName}}  <b>Email:</b> {{$item->user()->first()->email}}</li>
+                @endforeach
+     
+               {{-- @if(!empty($user->reminderMail))
+                    <li class="list-group-item"><b>Reminder E-mailadres: </b>{{ $user->reminderMail }}</li>
+                @endif--}}
             </ul>
+            </div>
+            @endif
             {{--
             @if(isset($user->team) && isset($user->team[0]->game))
                 <h2 class="text-center">Team</h2>
@@ -55,6 +87,35 @@
                 </ul>
             @endif
                 --}}
+                @else
+                <h4 class="text-danger text-center">geen inschrijving gevonden maak hier onde een nieuwe<h4>
+                        <form method="POST" action="createGaming">
+                                {{ csrf_field() }}
+                                <div class="form-group ">
+                                <label for="typeSelect" class="control-label ">inschrijvingtype</label>
+                                        <select class="form-control typeprofiel" id="typeSelect" name="inschrijvingtype">
+                                            <option selected='selected' value="niet-competitieve">niet-competitieve</option>
+                                            <option value="competitieve">competitieve</option>
+                                        </select>
+                                </div>
+                                <div class="gameselection">
+                                <div class="form-group ">
+                                        <label for="formSelect" class="control-label">Game</label>
+                                                <select class="form-control" id="gameSelect" name="Game">
+                                                    @foreach ($games as $item)
+                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Teamname">Teamname</label>
+                                <input name="teamname" type="text" class="form-control" id="Teamname" placeholder="Teamname" value="">
+                                </div>
+                                </div>
+            
+                        <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary mt-3">Wijziging oplsaan</button>
+                        </form>
+                @endif
             <h2 class="text-center">Activiteiten</h2>
             <form class="profileEdit" method="POST" action="editActivities">
                 {{ csrf_field() }}
