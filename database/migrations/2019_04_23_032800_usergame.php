@@ -18,7 +18,7 @@ class Usergame extends Migration
         $table->string('typeGamer');
         $table->string('teamname')->nullable();
         $table->integer('userID')->unsigned();
-        $table->integer('gameID')->unsigned();
+        $table->integer('gameID')->unsigned()->nullable();
         $table->foreign('userID')->references('id')->on('users');
         $table->foreign('gameID')->references('id')->on('games');
     });

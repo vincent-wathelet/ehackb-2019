@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes();
+//Auth::routes();
 
 // User panel
 Route::group(['middleware' => 'web'], function () {
@@ -22,45 +22,50 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // Show user his info
-    Route::get('/show', 'RegistrationController@show');
-    Route::get('/home', 'RegistrationController@show')->name('home');
+    //Route::get('/show', 'RegistrationController@show');
+    //Route::get('/home', 'RegistrationController@show')->name('home');
+
+    // downlaods
+    Route::get('/download/{file}','DownloadController@downloadppt');
+
 
     // Display Register form
-     Route::get('/new', 'RegistrationController@new');
-     Route::get('/register', 'RegistrationController@new');
+     //Route::get('/new', 'RegistrationController@new');
+     //Route::get('/register', 'RegistrationController@new');
 
     // Mailing handlers
      // Route::get('invite/{token}', 'RegistrationController@createMailInvite');
-     Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
+    // Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
 
     // Update activities
-    Route::post('editActivities', 'RegistrationController@editActivities');
+    //Route::post('editActivities', 'RegistrationController@editActivities');
 
     // Register post handlers
-     Route::post('storecasual', 'RegistrationController@storeCasual');
-     Route::post('registerpublic', 'RegistrationController@storePublicTeam');
-     Route::post('storeteam', 'RegistrationController@storeTeam');
+     //Route::post('storecasual', 'RegistrationController@storeCasual');
+     //Route::post('registerpublic', 'RegistrationController@storePublicTeam');
+     //Route::post('storeteam', 'RegistrationController@storeTeam');
 
     // Update options
-    Route::post('editOptions', 'RegistrationController@editOptions');
-
-    Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
+    //Route::post('editOptions', 'RegistrationController@editOptions');
+    //Route::post('editGaming','RegistrationController@editGaming');
+    //Route::post('createGaming','RegistrationController@createGaming');
+    //Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 
     // Edit steamid
     //Route::post('editSteamID', 'RegistrationController@editSteamID');
 
     // Store a new Mail invited
-    Route::post('registermail', 'RegistrationController@storeMailInvite')->name('registermail');
+    //Route::post('registermail', 'RegistrationController@storeMailInvite')->name('registermail');
 
     ////// Show user his info
     ////// Show user edit screen
-    Route::get('/edit', 'RegistrationController@edit');
+    //Route::get('/edit', 'RegistrationController@edit');
     ////// Display form to register Casual
-    Route::get('registercasual', 'RegistrationController@createCasual');
+    //Route::get('registercasual', 'RegistrationController@createCasual');
     ////// Display form to register Public
-    Route::get('registerteam', 'RegistrationController@createPublic');
+    //Route::get('registerteam', 'RegistrationController@createPublic');
     ////// Display form to register
-    Route::get('register', 'RegistrationController@create');
+    //Route::get('register', 'RegistrationController@create');
 
 });
 
@@ -88,27 +93,26 @@ Route::group(['middleware' => ['auth', 'statistics']], function () {
     Route::get('statistics', 'Admin\AdminController@statistics');
 
 });
-
-// Admin panel
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
     // Menu (manage)
-    Route::get('admin', 'Admin\AdminController@manage');
-
-    // Edit or create activity
-    Route::get('admin/activity', 'Admin\AdminController@manageActivity');
-    Route::post('admin/activity', 'Admin\AdminController@managePostActivity');
-    Route::get('admin/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
-
+    Route::get('admin', 'AdminController@index');
+    // game registraties
+    Route::get('/admin/gamereg', 'AdminController@gameregistratie');
+    // activity inschrijving list
+    Route::get('/admin/activityreg', 'AdminController@activityregistratie');
+    Route::get('/admin/activityreg/{activity_id}', 'AdminController@activityregList');
+    // soldo activity
+    Route::get('/admin/usersaldo', 'AdminController@usersaldo');
+    Route::get('/admin/excelsaldo', 'AdminController@excelsaldo');
+    Route::get('/admin/excelgame', 'AdminController@excelgame');
+    Route::get('/admin/excelactivity', 'AdminController@excelactivity');
+    
     // Edit or create game
-    Route::get('admin/game', 'Admin\AdminController@manageGame');
-    Route::post('admin/game', 'Admin\AdminController@managePostGame');
-    Route::get('admin/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
+    Route::get('admin/game', 'AdminController@manageGame');
+    //Route::post('admin/game', 'Admin\AdminController@managePostGame');
+    Route::get('admin/game/{game_id}', 'AdminController@editGame');
 
-    // Edit or create option
-    Route::get('admin/option', 'Admin\AdminController@manageOption');
-    Route::post('admin/option', 'Admin\AdminController@managePostOption');
-    Route::get('admin/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 
 });
 

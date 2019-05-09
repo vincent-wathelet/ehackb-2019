@@ -40,6 +40,12 @@ class User extends Authenticatable
       return $this->belongsToMany('App\Team','teamUsers','userID','teamID');
     }
 
+    public function game(){
+
+        return $this->belongsTo('App\usergame','id','userID');
+
+    }
+
     public function isAdmin(){
         if ($this->isAdmin === 1) {
             return true;

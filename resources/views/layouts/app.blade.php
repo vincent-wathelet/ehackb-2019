@@ -11,10 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <script src="js/jquery.min.js"></script>
+    <link href="{{ URL::to('/css/app.css') }}" rel="stylesheet">
+    <script src="{{ URL::to('js/jquery.min.js') }}"></script>
     
-    <link rel="stylesheet" href="css/style2019.css">
+    <link rel="stylesheet" href="{{ URL::to('css/style2019.css') }}">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -24,9 +24,9 @@
 </head>
 <body>
 <div id="app" >
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
+    <nav class="navbar stick-top navbar-expand-md navbar-dark" style="background-color: #1D1D1B;">
         <a class="navbar-brand" href="#top">
-            <img src="img/EhackBLogo.png" width="30" height="30" alt="logo">
+            <img src="{{ URL::to('img/EhackBLogo.png') }}" width="30" height="30" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent"

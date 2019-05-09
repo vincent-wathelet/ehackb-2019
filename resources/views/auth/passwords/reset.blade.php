@@ -1,11 +1,14 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
+<title>Wachtwoord Vergeten</title>
 @section('content')
 
-    <div class="card loginCard">
+    <div class="card  px-0  mx-auto py-5 my-5 card-with ">
+            <div class="card-image-top mx-auto">
+                    <img class="rounded-circle mx-auto" src="{{ URL::to('img/ehackbv6logo.png') }}" alt="EhackB">
+                    </div>
         <div class="card-body">
-            <img class="card-img-top" src="{{ URL::to('img/ehackb.png') }}" alt="EhackB">
-            <h2 class="text-center">Wachtwoord Resetten</h2>
+            <h3 class="text-center"><b>Wachtwoord Resetten</b></h3>
 
             <form role="form" method="POST" action="{{ url('/password/reset') }}">
             {{ csrf_field() }}
@@ -23,7 +26,7 @@
 
 
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password" control-label">Wachtwoord</label>
+                <label for="password" class="control-label">Wachtwoord</label>
                 <input id="password" type="password" class="form-control" name="password" required>
                 @if ($errors->has('password'))
                     <span class="help-block"><strong>{{ $errors->first('password') }}</strong></span>

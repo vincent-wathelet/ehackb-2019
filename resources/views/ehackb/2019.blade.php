@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -77,6 +77,7 @@
                 <div class="logo-nav-container">
                     <div class="logo-container">
                         <img src="img/EhackBLogo.png" alt="logo">
+                        <h3 class="pixText eventdatum"> 3 - 4 mei</h3>
                     </div>
                     <div class="selectors pixText">
                         <ul>
@@ -98,16 +99,25 @@
     <section id="registreren">
         <img id="fade" src="img/registreren/fade.png" alt="fade">
         <div class="register_center">
-            <div>
+            <div class="pixText">
                 <img src="img/registreren/logoSimple.svg" alt="Logo"/>`
-                <!--
+                
                 <p>EhackBv6 is afgelopen,</p>
-                <p>hou de website in de gaten voor de volgende editie!</p>-->
-
+                <p>hou de website in de gaten voor de volgende editie!</p>
+                {{--
+                @if(Auth::guest())
                 <div class="pixText" style="font-size: 20pt">
                     <a class="p-5" href="{{ url('/login') }}" >Login</a>
                     <a class="p5" href="{{ url('new') }}">Registreer</a>
                 </div>
+                    
+                @else
+                    <div class="pixText" style="font-size: 20pt">
+                        <p class="text-warning">U bent al geregistreerd</p>
+                        <a class="p-5 " href="{{ url('/show') }}" >Wijzig inschrijving</a>
+                    </div>
+                @endif
+                --}}
             </div>
         </div>
 
@@ -128,9 +138,10 @@
                         <h4 class="card-title">Kris Bijnens (VARONIS)</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Security vanuit het data standpunt </h6>
                         <p class="card-text">Inclusief demo van een hack en detection met Varonis</p>
+                        <div class="btn  btn-warning"><a class="pixText text-dark" href="/download/VARONIS">Powerpoint</a></div>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 15:00 - 16:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -141,7 +152,7 @@
                             voor development en system engineering.</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 15:00 - 16:00 / Audi 4</small>
                     </div>
                 </div>
 
@@ -149,14 +160,15 @@
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/cloudsecurity.jpg" alt="Irasara Senarathne">
+                    <img class="card-img-top" src="img/programma/PaltoAltoNetworks.png" alt="Irasara Senarathne">
                     <div class="card-body">
-                        <h4 class="card-title">Rutger Truyers (PALO ALTO)</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Cloud security in IaaS, SaaS, PaaS &
-                            Next Generation Firewalls today</h6>
+                        <h4 class="card-title">Rutger Truyers (PALO ALTO NETWORKS)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Enterprise Security Evolved, Break the security Silo's.</h6>
+                            <p class="card-text">Cloud security in IaaS, SaaS, PaaS &
+                                Next Generation Firewalls today</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 16:00 - 17:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -173,22 +185,26 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 16:00 - 17:00 / Audi 4</small>
                     </div>
                 </div>
 
             </div>
 
             <div class="card-deck">
-
+		
                 <div class="card">
                     <img class="card-img-top" src="img/programma/internet-of-things-IoT.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Matts Devriendt (DELAWARE) </h4>
-                        <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">IoT & security in IoT: Why before how</h6>
+                        <p class="card-text">Connected is not enough in today’s successful iot stories. Start with why before how. The how part is maybe influenced by the why. 
+                            Combine vision, strategy and iot for strong industry 4.0 business cases. 
+                            During the talk an existing smart farming solution will function as a reference case.
+                            In Roeselare, "Potato valley" for the locals, potato growers make grateful use of AVR’s machines and technology to make planting potatoes and harvesting more efficient.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:00 - 18:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 17:00 - 18:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
@@ -206,7 +222,7 @@
                             digitale certificaten.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:00 - 18:00 / Audi 4</small>
+                        <small class="text-muted">3 mei 17:00 - 18:00 / Audi 4</small>
                     </div>
                 </div>
 
@@ -226,10 +242,26 @@
                             een hacker met een tal van voorbeelden uit de praktijk! </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:00 - 19:00 / Audi 1</small>
+                        <small class="text-muted">3 mei 18:00 - 19:00 / Audi 1</small>
                     </div>
                 </div>
                 <div class="card">
+                    <img class="card-img-top d-block" src="{{asset('img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg')}}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Wim De Bruyn (HOGENT)</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Hoe kan je de klant tevreden stellen en sneller je doel bereiken?</h6>
+                        <p class="card-text">
+				Business canvas model, de customer journey, scrum sprints en nexus : 
+				hoe de klant tevredenstellen en sneller en beter het doel te bereiken.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">3 mei 19:00 - 20:00 / Audi 4</small>
+                    </div>
+                </div>
+		<div class="card-deck">
+			<div class="col-lg-6 mx-auto">
+			<div class="card">
                     <img class="card-img-top d-block" src="{{asset('img/programma/social-engineering.jpg')}}"
                          alt="Card image cap">
                     <div class="card-body">
@@ -240,12 +272,13 @@
                             artikels tot social media. Op het einde van de workshop kan de deelnemer een reeks
                             bronnen ondervragen die toelaten een analyse uit te voeren om een social engineering
                             aanval en/of een hacking campagne op te zetten. </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">19:00 - 20:00 / C.209</small>
-                    </div>
+                    	</div>
+                    	<div class="card-footer">
+                       		 <small class="text-muted">3 mei 19:00 - 20:00 / C.209</small>
+                    	</div>
                 </div>
-
+		</div>
+		</div>
             </div>
 
             <div class="program_header">
@@ -262,7 +295,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Hacking workshop</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
 
@@ -275,7 +308,7 @@
                             create corner, voorzien van de laatste nieuwe technologie!</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -294,7 +327,7 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20:00 / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20:00 / Grote zaal</small>
                     </div>
                 </div>
 
@@ -322,7 +355,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -332,18 +365,18 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/programma/rocketleague-photo.jpg')}}"
                          alt="Rocket League">
                     <div class="card-body">
-                        <h4 class="card-title">Rocket League</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
+                        <h4 class="card-title">Rocket League 2 vs 2</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
             </div>
@@ -357,7 +390,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -368,7 +401,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
@@ -378,9 +411,32 @@
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Vanaf 20u / Grote zaal</small>
+                        <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
                     </div>
                 </div>
+                
+            </div>
+            <div class="card-deck">
+                    <div class="card ">
+                            <img class="card-img-top" src="img/programma/fortnite.jpg" alt="Hearthstone">
+                            <div class="card-body">
+                                <h4 class="card-title">Fortnite</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Cross-platform</h6>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
+                            		</div>
+                        	</div>
+			<div class="card ">
+                            <img class="card-img-top" src="img/programma/olsdschool.jpg" alt="Hearthstone">
+                            <div class="card-body">
+                                <h4 class="card-title">Runscape Old School</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">PC</h6>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">3 mei Vanaf 20u / Grote zaal</small>
+                            </div>
+                        </div>
             </div>
         </div>
     </section>
@@ -443,8 +499,8 @@
 
     <section id="video">
         <iframe class="fbvideo"
-                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F2068042613417615%2F&width=560&show_text=false&height=314"
-                width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="560" height="314" src="https://www.youtube.com/embed/rbi8jBNGLMw" 
+                 style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowTransparency="true" allowFullScreen="true"></iframe>
     </section>
 
@@ -484,31 +540,37 @@
 <footer>
     <div class="footer-logo">
         <div class="master_logo">
-            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/EhB/ehb-logo.jpg" alt="EhB"></a>
-            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/Signpost/signpost.jpg" alt="Signpost"></a>
-            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Signpost/Acedemic_Software.gif"
-                                                                       alt="AcademicShop"></a>
-            <a href="#" target="_blank"><img src="img/logo/Alliantiefonds/alliantie-metketting.png" alt="Alliantiefonds"></a>
-            <a href="http://www.delaware.pro/nl-nl" target="_blank"><img
-                        src="img/logo/Delaware/Delaware.jpg" alt="Delaware"></a>
-            <a href="https://www.hogent.be/" target="_blank"><img src="img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg"
-                                                                     alt="Hogent"></a>
+            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/Lenovo/lenovo.png" alt="Lenovo"></a>
 
+            <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/Signpost/signpost.jpg" alt="Signpost"></a>
+                    
+            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Signpost/Acedemic_Software.gif" alt="AcademicShop"></a>
+            
+            <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/EhB/ehb-logo.jpg" alt="EhB"></a>
+            
+            
+            <a href="#" target="_blank"><img src="img/logo/Alliantiefonds/alliantie-metketting.png" alt="Alliantiefonds"></a>      
+            
+            <a href="https://www.hogent.be/" class="hogent" target="_blank"><img src="img/logo/Hogent/HOGENT_Logo_Pos_rgb.jpg"
+                                                                  alt="Hogent"></a>
+              
         </div>
         <div class="mid_logo">
-            <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/Lenovo/lenovo.png" alt="Lenovo"></a>
-            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/Innoviris/innoviris.png"
-                                                                      alt="Innoviris Brussels"></a>
-            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/Cisco Networking Academy/cisco_logo_large.png" alt="Cisco"></a>
-            <a href="https://www.paloaltonetworks.com" target="_blank"><img src="img/logo/Palo Alto/pan-logo-badge-blue-light-kick-up.jpg" alt="Cisco"></a>
+            
+            
+           <a href="https://www.axxes.com/" target="_blank"><img src="img/logo/axxes/axxes.png" alt="Cisco"></a>
+           <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/Innoviris/innoviris.png"
+            alt="Innoviris Brussels"></a> 
             <a href="https://www.erasmushogeschool.be/nl/stuvo" target="_blank"><img src="img/logo/Stuvo/stuvo-ehb.png" alt="Cisco"></a>
+		<a href="https://www.accenture.com/be-en" target="_blank"><img src="img/logo/accenture/accenture.png" alt="Accenture"></a>
         </div>
         <div class="basic_logo">
+            <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/Cisco Networking Academy/cisco_logo_large.png" alt="Cisco"></a>   
+            <a href="https://www.paloaltonetworks.com" target="_blank"><img src="img/logo/Palo Alto/pan-logo-badge-blue-light-kick-up.jpg" alt="Cisco"></a>
+            <a href="http://www.delaware.pro/nl-nl" target="_blank"><img src="img/logo/Delaware/Delaware.jpg" alt="Delaware"></a>
             <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet/Belnet.jpg" alt="Belnet"></a>
-            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/Cisco - Meraki/cisco_meraki.jpg"
-                                                                               alt="Cisco - Meraki"></a>
-            <a href="https://honim.typepad.com/biasc/" target="_blank"><img src="img/logo/BIASC/BIASC.png"
-                                                                                 alt="BIASC"></a>
+            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/Cisco - Meraki/cisco_meraki.jpg" alt="Cisco - Meraki"></a>
+            <a href="https://honim.typepad.com/biasc/" target="_blank"><img src="img/logo/BIASC/BIASC.png" alt="BIASC"></a>
         </div>
     </div>
 </footer>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('head')
 
@@ -9,7 +9,7 @@
 
 @section('content')
 
-    <div class="card container">
+    <div class="card container mt-5">
         <div class="card-body">
             <div class="row ">
             <img class="card-image-top mx-auto rounded-circle my-3" src="img/ehackbv6logo.png" alt="ehackb logo v6">
@@ -151,7 +151,7 @@
                                    aria-label="Checkbox for following text input" {{  ($talk->maxUsers - $talk->users->count()) <= 0 ? 'disabled' : '' }}>
                          </span>
                             <input type="text" class="form-control" disabled aria-label="Text input with checkbox"
-                                   value="{{$talk->name}} @if($talk->maxUsers != 9999) - Plaatsen: {{ $talk->maxUsers - $talk->users->count() }} @endif">
+                                   value="{{$talk->name}}">
                         </div>
                     @endforeach
 
@@ -164,7 +164,7 @@
                                    aria-label="Checkbox for following text input" {{  ($workshop->maxUsers - $workshop->users->count()) <= 0 ? 'disabled' : '' }}>
                          </span>
                             <input type="text" class="form-control" disabled aria-label="Text input with checkbox"
-                                   value="{{$workshop->name}} @if($workshop->maxUsers != 9999) - Plaatsen: {{ $workshop->maxUsers - $workshop->users->count() }} @endif">
+                                   value="{{$workshop->name}}">
                         </div>
                     @endforeach
 
@@ -187,7 +187,10 @@
                 <div id="register3">
 
                     <h2 class="text-center">Games</h2>
-
+			<div class="alert alert-danger" role="alert">
+                        <p>Toegang tot de lan-party met computer kost de deelnemer <strong>&euro; 5</strong>. 
+                            Hiervoor krijg je een zitplaats met 1 stopcontact, 1 netwerkkabels en 1 consumptie. </p>
+                        </div>
 
                     <div class="form-group ">
                         <label for="formSelect" class="control-label">Maak je keuze</label>
@@ -202,6 +205,12 @@
                     
 
                     <div class="form-group gameselection">
+                        <div class="alert alert-danger mt-2" role="alert">
+                            In het geval van een team van 5 spelers moeten er minstens 2 van EhB of HOGENT zijn.<br>
+                            In het geval van een team van 2 spelers moet er minstens 1 van EhB of HOGENT zijn.<br>
+                            Schrijf je ter controle verplicht in met je EhB of Hogent e-mailadres, anders zal je team geweigerd worden.<br>
+                            <b>We openen de resterende plaatsen voor de gamecontests voor iedereen vanaf 30/04</b>
+                            </div>
                         <label for="inputGameID" class="control-label">Game</label>
                         <select class="form-control" id="inputGameID" name="gameid">
                             @foreach(App\Game::all() as $game)
